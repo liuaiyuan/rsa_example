@@ -3,7 +3,7 @@ package utils
 import (
 	"encoding/base64"
 	"math/rand"
-	"rsa_example/utils/rsautil"
+	"rsa_example/pkg/utils/rsautil"
 )
 
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&**()+=!~")

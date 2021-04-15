@@ -3,8 +3,8 @@ package def
 import (
 	"encoding/base64"
 	"net/url"
-	"rsa_example/utils"
-	"rsa_example/utils/rsautil"
+	"rsa_example/pkg/utils"
+	"rsa_example/pkg/utils/rsautil"
 	"time"
 
 	"github.com/google/go-querystring/query"

@@ -8,9 +8,9 @@ import (
 	"io/ioutil"
 	"net/http"
 	"rsa_example/def"
-	"rsa_example/logger"
-	"rsa_example/utils"
-	"rsa_example/utils/aesutil"
+	"rsa_example/pkg/logger"
+	utils "rsa_example/pkg/utils"
+	"rsa_example/pkg/utils/aesutil"
 	"strings"
 	"time"
 
