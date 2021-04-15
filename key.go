@@ -1,10 +1,11 @@
 package main
 
 import (
-	"admin_api/pkg/logger"
-	"admin_api/pkg/utils/rsautil"
-	log "github.com/sirupsen/logrus"
 	"os"
+	"rsa_example/logger"
+	"rsa_example/utils/rsautil"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {

@@ -1,17 +1,17 @@
 package main
 
 import (
-	"admin_api/pkg/logger"
-	"admin_api/pkg/utils"
-	"admin_api/pkg/utils/rsautil"
-	"admin_api/test/def"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"rsa_example/def"
+	"rsa_example/logger"
+	"rsa_example/utils"
+	"rsa_example/utils/aesutil"
+	"rsa_example/utils/rsautil"
 	"strings"
 	"time"
 
-	aesutil "admin_api/pkg/utils/aes"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -20,7 +20,6 @@ type User struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 }
-
 
 func main() {
 	logger.InitLogger()
@@ -135,6 +134,3 @@ func genUserData() User {
 		Password: "123456",
 	}
 }
-
-
-

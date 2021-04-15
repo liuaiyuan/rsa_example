@@ -1,12 +1,13 @@
 package def
 
 import (
-	"admin_api/pkg/utils"
-	"admin_api/pkg/utils/rsautil"
 	"encoding/base64"
-	"github.com/google/go-querystring/query"
 	"net/url"
+	"rsa_example/utils"
+	"rsa_example/utils/rsautil"
 	"time"
+
+	"github.com/google/go-querystring/query"
 )
 
 type (

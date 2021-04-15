@@ -1,20 +1,21 @@
 package main
 
 import (
-	"admin_api/pkg/logger"
-	"admin_api/pkg/utils"
-	aesutil "admin_api/pkg/utils/aes"
-	"admin_api/test/def"
 	"bytes"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"github.com/kataras/iris/v12"
-	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
+	"rsa_example/def"
+	"rsa_example/logger"
+	"rsa_example/utils"
+	"rsa_example/utils/aesutil"
 	"strings"
 	"time"
+
+	log "github.com/sirupsen/logrus"
 )
 
 var (
@@ -92,7 +93,8 @@ func handleLogin(ctx iris.Context) {
 	fmt.Println(login.Username)
 	fmt.Println(login.Password)
 
-	response(ctx)
+	var data = def.GenTokenInfo()
+	response(ctx, data)
 }
 
 func handleLogin2(ctx iris.Context) {
@@ -144,12 +146,11 @@ func handleLogin2(ctx iris.Context) {
 	//ioutil.ReadAll(ctx.Request().Body)
 	//io.C
 
-	response(ctx)
+	//response(ctx)
 }
 
-func response(ctx iris.Context) {
+func response(ctx iris.Context, data interface{}) {
 	var (
-		data   = def.GenTokenInfo()
 		aesKey = utils.RandString(16)
 		aesIv  = utils.RandString(16)
 	)

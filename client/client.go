@@ -1,16 +1,16 @@
 package main
 
 import (
-	"admin_api/pkg/logger"
-	"admin_api/pkg/utils"
-	aesutil "admin_api/pkg/utils/aes"
-	"admin_api/test/def"
 	"bytes"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"rsa_example/def"
+	"rsa_example/logger"
+	"rsa_example/utils"
+	"rsa_example/utils/aesutil"
 	"strings"
 	"time"
 
